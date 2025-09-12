@@ -7,9 +7,9 @@
     "target": "esnext", // Or "esnext" if you want the latest features
     "types": ["node"], // Include Node.js type definitions
     "lib": ["esnext"], // Include modern JS features
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
+    // "sourceMap": true,
+    // "declaration": true,
+    // "declarationMap": true,
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
     "strict": true,
