@@ -2,12 +2,12 @@ import express from "express";
 const port = process.env.PORT || 1000;
 const app = express();
 
-app.use("/", (req, res) => {
+app.use("/api", (req, res) => {
   res.json({ data: [], msg: "data is life" });
   return;
 });
 
-app.use("/create", (req, res) => {
+app.use("/api/create", (req, res) => {
   res.json({ data: [], msg: "" });
   return;
 });
