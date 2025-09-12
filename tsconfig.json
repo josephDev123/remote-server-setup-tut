@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "rootDir": "./",
+    "outDir": "./dist",
+    "module": "nodenext", // Use nodenext for Node.js ESM
+    "target": "esnext", // Or "esnext" if you want the latest features
+    "types": ["node"], // Include Node.js type definitions
+    "lib": ["esnext"], // Include modern JS features
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "strict": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+    "moduleResolution": "nodenext" // Align with nodenext for ESM
+  },
+  "exclude": ["node_modules"]
+}
