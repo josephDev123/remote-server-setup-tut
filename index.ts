@@ -1,14 +1,8 @@
 import express from "express";
+import { router } from "./routes.js";
 const port = process.env.PORT || 1000;
 const app = express();
 
-app.use("/api", (req, res) => {
-  res.json({ data: [], msg: "data is life" });
-  return;
-});
+app.use("/api", router);
 
-app.use("/api/create", (req, res) => {
-  res.json({ data: [], msg: "" });
-  return;
-});
 app.listen(port, () => console.log(`listening on port ${port}`));
