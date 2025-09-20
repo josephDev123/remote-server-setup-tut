@@ -1,12 +1,12 @@
 import { Router } from "express";
+import { Controller } from "./controller.js";
 
 export const router = Router();
+const controller = new Controller();
 
-router.get("/", (req, res) => {
-  res.json({ data: ["index"], msg: "index of life" });
-  return;
-});
-router.get("/find", (req, res) => {
-  res.json({ data: ["find data"], msg: "data is life" });
-  return;
-});
+router.get("/", controller.index);
+router.post("/create", controller.create);
+
+router.get("/find", controller.find);
+
+router.delete("/delete", controller.delete);
