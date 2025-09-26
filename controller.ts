@@ -16,7 +16,7 @@ export class Controller {
         "INSERT INTO posts(title, description) VALUES($1, $2) RETURNING *",
         [title, description]
       );
-      console.log(result);
+
       res.json({ data: result.rows[0], msg: "data created" });
     } catch (err) {
       console.error("Error inserting data:", err);
@@ -24,8 +24,10 @@ export class Controller {
     }
   }
 
-  find(req: Request, res: Response) {
-    res.json({ data: ["find data"], msg: "data is life" });
+  async find(req: Request, res: Response) {
+    const dbClient = await connectDB();
+    const query = await dbClient.query("SELECT * FROM posts");
+    res.json({ data: query.rows, msg: "post fetch  successfully" });
     return;
   }
   delete(req: Request, res: Response) {
